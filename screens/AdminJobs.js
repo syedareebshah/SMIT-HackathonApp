@@ -5,7 +5,7 @@ import database from '@react-native-firebase/database';
 
 
 import {
-    TouchableOpacity,
+  TouchableOpacity,
   Image,
   ScrollView,
   StyleSheet,
@@ -13,41 +13,39 @@ import {
   Text,
 } from 'react-native';
 
-import { Button,Input,Item } from "native-base";
+import { Button, Input, Item } from "native-base";
 
 
-const AdminJobs = ({navigation}) => {
+const AdminJobs = ({ navigation }) => {
   let [data, setdata] = useState([])
- function onLongPress(){
+  function onLongPress() {
     alert("Deleted")
- }
+  }
 
-  useEffect(()=>{
-    database().ref('Jobs').once('value').then(snapshot =>{
+  useEffect(() => {
+    database().ref('Jobs').once('value').then(snapshot => {
       let dataRef = Object.values(snapshot.val());
       setdata(dataRef)
     })
-},[])
+  }, [])
 
-//  var x = [1,2,3,4,5,6]
+  //  var x = [1,2,3,4,5,6]
 
-console.log("hello",data)
+  console.log("hello", data)
 
   return (
     <ScrollView style={styles.main}>
       {data.map((v, i) => {
         return (
           <View key={i}>
-               <TouchableOpacity onPress={()=>onLongPress()}>
-
-            <Text style={styles.item}>Post: {v.title} {"\n"}Salary: {v.salary} {"\n"}Job Description: {v.desc} {"\n"}Company: {v.comp}</Text>
-            
+            <TouchableOpacity onPress={() => onLongPress()}>
+              <Text style={styles.item}>Post: {v.title} {"\n"}Salary: {v.salary} {"\n"}Job Description: {v.desc} {"\n"}Company: {v.comp}</Text>
             </TouchableOpacity>
           </View>
         )
       })}
-      
-      
+
+
     </ScrollView>
   )
 };
@@ -58,7 +56,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   item: {
-    fontSize:18,
+    fontSize: 18,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
