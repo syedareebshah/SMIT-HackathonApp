@@ -41,6 +41,7 @@ const StuData = ({navigation}) => {
       setMail("")
       setNumber("")
       setMarks("")
+      alert("Profile Created")
     }
 
 

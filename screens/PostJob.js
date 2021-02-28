@@ -40,7 +40,9 @@ const PostJob = ({navigation}) => {
       setTitle("")
       setDesc("")
       setSal("")
-      setComp("")      
+      setComp("")  
+      alert("Job Posted")
+
     }
 
 
