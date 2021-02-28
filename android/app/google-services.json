@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "475487740669",
+    "project_id": "gc-assignment-areeb",
+    "storage_bucket": "gc-assignment-areeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475487740669:android:58e8f98b99bf6d91e31494",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475487740669-p9viegnc47ivdcrij4lk62pidbjt5h05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx67WYS8yXA7054HkscsS6Tjcczv_ER7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475487740669-p9viegnc47ivdcrij4lk62pidbjt5h05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
