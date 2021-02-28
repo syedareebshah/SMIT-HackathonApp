@@ -5,6 +5,7 @@ import database from '@react-native-firebase/database';
 
 
 import {
+  TouchableOpacity,
   Image,
   ScrollView,
   StyleSheet,
@@ -17,6 +18,9 @@ import { Button,Input,Item } from "native-base";
 
 const AdminStu = ({navigation}) => {
   let [data, setdata] = useState([])
+  function onLongPress() {
+    alert("Deleted")
+  }
 
 
   useEffect(()=>{
@@ -34,9 +38,10 @@ console.log("hello",data)
       {data.map((v, i) => {
         return (
           <View key={i}>
+            <TouchableOpacity onPress={()=> onLongPress()}>
 
             <Text style={styles.item}>Name: {v.name} {"\n"}Phone: {v.number} {"\n"}Email: {v.mail} {"\n"}Marks: {v.marks}</Text>
-            
+            </TouchableOpacity>
             
           </View>
         )
